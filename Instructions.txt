@@ -1,0 +1,45 @@
+Style Stage
+
+
+DESCRIPTION 
+
+
+Using CSS, construct a complete visual design for the popular "Style Stage" challenge at https://stylestage.dev/. Your design must be your very own, and you cannot use a CSS framework or template - it must be original work.
+
+
+INSTRUCTIONS
+
+
+    Carefully read the "About" and "Guidelines" sections on the page at https://stylestage.dev/.
+    Build a responsive layout for the provided HTML page (you may not change the HTML) using CSS media queries, flexbox, and/or grid. Include at least 2 different layouts - one for the small screen (a smartphone), and one for a desktop/laptop.
+    Select suitable web-safe font(s) and apply effective typographic styles for content copy including body text, headings, lists, navigation etc. using CSS.
+    Ensure that any navigational elements adapt appropriately to smaller and larger screen widths.
+    Apply a tasteful colour scheme, perhaps with suitable background-images and possibly branding elements.
+    Validate your CSS to be sure it is free of errors (https://jigsaw.w3.org/css-validator/).
+    Structure, organize, format and comment your CSS file(s).
+    Be sure to set up a local and a remote repository - make regular commits with comments that document your progress.
+    Add citations in your code to reference any and all sources that you consulted during the development of your solution so that it is clear what is your work, what has been integrated, and what has been adapted to suit your needs.
+    Have fun – perhaps even submit your design to Style Stage if you think you'd like to share it with the community. 
+
+
+TAKE IT FURTHER
+
+
+    Perhaps include some interesting and suitable web fonts from a font-service or with the @font-face rule.
+    Use a variety of CSS rules to improve the typography – open up the line-spacing, spread out the letters in headings, change the case etc. 
+    Include a variety of special CSS effects in a tasteful manner (like drop shadows, background images, gradients, etc.)
+    Anything else that you can dream up…
+
+
+EVALUATION
+
+
+Please refer to the attached assessment rubric.
+
+
+SUBMITTING YOUR WORK
+
+
+Please provide a URL to a working application on a Web server. You will also need to provide a link to the remote repository for the project.
+
+

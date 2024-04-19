@@ -1,0 +1,7 @@
+:root {
+    --positive-yellow: #ffa600;
+}
+
+body {
+    background: var(--positive-yellow);
+}
