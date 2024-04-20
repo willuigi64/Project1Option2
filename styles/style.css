@@ -3,26 +3,54 @@
 }
 
 html {
-    overflow-x: hidden;
-}
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
 
 body {
+    font-family: Roboto, sans-serif;
+    font-size: 120%;
+    font-weight: 900;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: var(--positive-yellow);
 }
 
+body a.skip-link {
+    text-align: center;
+    margin-top: 8px;
+    border: solid white;
+    background-color: gray;
+    padding: 4px;
+    color: white;
+    text-decoration: none;
+    filter: drop-shadow(2px 2px 1px black);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color: orangered;
+    text-decoration: underline;
+}
+
 header div.container {
     display: grid;
 }
 
-header div.container a.link-github{
-    font-size: 0;
+h1 {
+    text-align: center;
+    font-size: 400%;
+    margin-bottom: 0;
 }
 
-nav::before {
-    border: black 2px;
+header div.container a.link-github{
+    font-size: 0;
 }
 
 body nav a {
