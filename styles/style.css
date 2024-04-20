@@ -2,17 +2,12 @@
     --positive-yellow: #ffa600;
 }
 
-html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
 
 body {
     font-family: Roboto, sans-serif;
     font-size: 120%;
     font-weight: 900;
+    line-height: 1.15;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,31 +26,63 @@ body a.skip-link {
 }
 
 a {
-    color: white;
+    color: orangered;
     text-decoration: none;
 }
+a:visited {
+    color: maroon;
+}
 a:hover {
-    color: orangered;
+    color: white;
     text-decoration: underline;
 }
 
-header div.container {
-    display: grid;
+
+/* If landscape (desktop) put the star in a grid display, left of h1 and h2 */
+@media screen and (orientation: landscape){
+    header div.container {
+        display: grid;
+        grid-template-areas: 
+        "star header"
+        "star subhead"
+        "paragraph paragraph";
+        grid-template-columns: 1fr 2fr;
+    }
 }
 
-h1 {
+div.container h1 {
+    grid-area: header;
     text-align: center;
     font-size: 400%;
     margin-bottom: 0;
 }
+div.container h2 {
+    grid-area: subhead;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+div.container p {
+    grid-area: paragraph;
+    text-align: center;
+}
 
 header div.container a.link-github{
+    grid-area: star;
     font-size: 0;
 }
 
 body nav a {
     color: black;
 }
+body nav a:visited {
+    color: black;
+}
+body nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
 
 body nav ul {
     display: flex;
@@ -65,26 +92,69 @@ body nav ul {
     list-style: none;
 }
 
-li {
-    
-}
-
-@media (orientation: portrait) {
+@media screen and (orientation: portrait) {
     nav ul {
         flex-direction: column;
     }
+    nav li a {
+        text-decoration: underline;
+    }
+    nav li:last-child a{
+        text-decoration: none;
+    }
 }
 
-@media (orientation: landscape) {
-    li + li::before {
+@media screen and (orientation: landscape) {
+    nav li + li::before {
         content: "|";
     }
 }
 
-main {
-    
+#about > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+main div.container h2 {
+    font-size: 200%;
+    justify-content: center;
+    text-decoration: underline;
+    margin-bottom: 0;
+}
+
+main div.container p {
+    margin-bottom: 0;
+}
+
+main div.container blockquote {
+    text-align: center;
+    border: solid white;
+    background-color: gray;
+    padding: 4px;
+    color: white;
+    text-decoration: none;
+    filter: drop-shadow(2px 2px 1px black);
+}
+
+main div.container blockquote p{
+    margin: 0%;
+}
+
+#about > section:nth-child(2) > p:nth-child(3) {
+    text-decoration: underline;
+}
+
+#about > section:nth-child(2) > ul:nth-child(4) {
+    justify-content: center;
+    list-style:square;
+}
+
+#about > section:nth-child(2) > ul:nth-child(4) li::marker {
+    color: gray;
 }
 
 footer {
-    background: white;
+    
 }
