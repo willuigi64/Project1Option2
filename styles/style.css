@@ -2,6 +2,61 @@
     --positive-yellow: #ffa600;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: var(--positive-yellow);
+}
+
+header div.container {
+    display: grid;
+}
+
+header div.container a.link-github{
+    font-size: 0;
+}
+
+nav::before {
+    border: black 2px;
+}
+
+body nav a {
+    color: black;
+}
+
+body nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0%;
+    list-style: none;
+}
+
+li {
+    
+}
+
+@media (orientation: portrait) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+@media (orientation: landscape) {
+    li + li::before {
+        content: "|";
+    }
+}
+
+main {
+    
+}
+
+footer {
+    background: white;
 }
