@@ -14,7 +14,7 @@ body {
     background: var(--positive-yellow);
 }
 
-body a.skip-link {
+body a.skip-link, main div.container blockquote {
     text-align: center;
     margin-top: 8px;
     border: solid white;
@@ -22,7 +22,13 @@ body a.skip-link {
     padding: 4px;
     color: white;
     text-decoration: none;
-    filter: drop-shadow(2px 2px 1px black);
+    filter: drop-shadow(2px 2px black);
+    text-shadow: 1px 1px black;
+}
+
+header {
+    margin-top: 16px;
+    border-top: solid black;
 }
 
 a {
@@ -88,6 +94,7 @@ body nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     padding: 0%;
     list-style: none;
 }
@@ -110,6 +117,18 @@ body nav ul {
     }
 }
 
+#main .container, #contribute, .profile .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#main div article {
+    border-top: solid black;
+    margin-top: 8px;
+}
+
 #about > section {
     display: flex;
     flex-direction: column;
@@ -126,16 +145,6 @@ main div.container h2 {
 
 main div.container p {
     margin-bottom: 0;
-}
-
-main div.container blockquote {
-    text-align: center;
-    border: solid white;
-    background-color: gray;
-    padding: 4px;
-    color: white;
-    text-decoration: none;
-    filter: drop-shadow(2px 2px 1px black);
 }
 
 main div.container blockquote p{
@@ -155,6 +164,28 @@ main div.container blockquote p{
     color: gray;
 }
 
-footer {
-    
+#files > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+footer {
+    display:flex;
+    align-items: center;
+}
+
+.page-footer .container ul, .profile ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+    list-style: none;
+}
+/* 
+a.link-github:nth-child(1) {
+    font-size: 0;
+} */
