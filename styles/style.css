@@ -1,8 +1,10 @@
+/* Ridge Racer Type 4's iconic Positive Yellow.
+   0 Cyan - 35 Magenta - 100 Yellow - 0 Black */
 :root {
     --positive-yellow: #ffa600;
 }
 
-
+/* General sizing, font declaration, organize container divs in centered columns, set background to Positive Yellow*/
 body {
     font-family: Roboto, sans-serif;
     font-size: 120%;
@@ -14,6 +16,7 @@ body {
     background: var(--positive-yellow);
 }
 
+/* RRT4 message-box-styled button and blockquote.*/
 body a.skip-link, main div.container blockquote {
     text-align: center;
     margin-top: 8px;
@@ -26,11 +29,13 @@ body a.skip-link, main div.container blockquote {
     text-shadow: 1px 1px black;
 }
 
+/* create border at top of header spanning width of view */
 header {
     margin-top: 16px;
     border-top: solid black;
 }
 
+/* general link colors and interaction */
 a {
     color: orangered;
     text-decoration: none;
@@ -44,7 +49,8 @@ a:hover {
 }
 
 
-/* If landscape (desktop) put the star in a grid display, left of h1 and h2 */
+/* If landscape (desktop) put the star in a grid display, left of h1 and h2.
+   Otherwise, the github star remains large in the column view (mobile first) */
 @media screen and (orientation: landscape){
     header div.container {
         display: grid;
@@ -56,6 +62,8 @@ a:hover {
     }
 }
 
+/* Declare grid areas for elements affected by landscape orientation media query.
+   Style type to keep the look close to RRT4*/
 div.container h1 {
     grid-area: header;
     text-align: center;
@@ -73,24 +81,27 @@ div.container p {
     text-align: center;
 }
 
+/* hide github link text, leaving the star as the only redirect button. */
 header div.container a.link-github{
     grid-area: star;
     font-size: 0;
 }
 
-body nav a {
+/* for the nav bar, keep the links simple.
+   hovering turns them white and gives an underline for usability */
+nav a {
     color: black;
 }
-body nav a:visited {
+nav a:visited {
     color: black;
 }
-body nav a:hover {
+nav a:hover {
     color: white;
     text-decoration: underline;
 }
 
-
-body nav ul {
+/* turn nav bar into a flexbox, remove list styling. */
+nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -99,6 +110,7 @@ body nav ul {
     list-style: none;
 }
 
+/* if mobile, change order and spacing of navbar to be vertical, separated by underlines except for the last link. */
 @media screen and (orientation: portrait) {
     nav ul {
         flex-direction: column;
@@ -111,12 +123,14 @@ body nav ul {
     }
 }
 
+/* if desktop, leave flex list items in horizontal order. Seperate with "|" */
 @media screen and (orientation: landscape) {
     nav li + li::before {
         content: "|";
     }
 }
 
+/* article containers order in columns, create flex items. */
 #main .container, #contribute, .profile .container{
     display: flex;
     flex-direction: column;
@@ -124,6 +138,7 @@ body nav ul {
     text-align: center;
 }
 
+/* black border for each article's beginning/end. */
 #main div article {
     border-top: solid black;
     margin-top: 8px;
@@ -176,6 +191,7 @@ footer {
     align-items: center;
 }
 
+/* set custom flexbox list handling. */
 .page-footer .container ul, .profile ul {
     display: flex;
     flex-wrap: wrap;
@@ -185,7 +201,3 @@ footer {
     padding: 0%;
     list-style: none;
 }
-/* 
-a.link-github:nth-child(1) {
-    font-size: 0;
-} */
